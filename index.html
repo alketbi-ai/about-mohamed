@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>محمد الكتبي</title>
-  <meta name="description" content="نبذة عن محمد الكتبي وروابط حساباته">
+  <meta name="description" content="محمد عبدالله الكتبي — مهندس حاسوب من الإمارات، مسافر وصانع محتوى، زرت قرابة 70 دولة.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -12,57 +12,120 @@
 <body>
 
   <header class="hero">
+    <span class="sticker s1">✈️</span>
+    <span class="sticker s2">🌍</span>
+    <span class="sticker s3">📸</span>
+    <span class="sticker s4">🔥</span>
+    <span class="sticker s5">🚲</span>
+    <span class="sticker s6">🌱</span>
+
     <img class="avatar" src="images/profile.svg" alt="صورة محمد الكتبي">
     <h1>محمد الكتبي</h1>
-    <p class="tagline">صانع محتوى · الإمارات 🇦🇪</p>
+    <p class="en">Mohamed Alketbi</p>
+    <p class="tagline">مهندس حاسوب · مسافر · صانع محتوى</p>
+    <div class="chips">
+      <span class="chip">🇦🇪 الذيد، الشارقة</span>
+      <span class="chip">🌍 ~70 دولة</span>
+      <span class="chip">🎓 Chico State</span>
+    </div>
   </header>
 
   <main>
-    <!-- نبذة -->
+    <!-- من أنا -->
     <section class="card">
-      <h2>نبذة عني</h2>
+      <h2><span class="ico">👋</span> من أنا</h2>
       <p>
-        اكتب هنا نبذة قصيرة عنك: من أنت، وش تسوي، وايش يميز محتواك.
-        مثال: أزور الأماكن الجديدة في الإمارات وأعرّفكم عليها بأسلوب بسيط وصادق.
+        محمد عبدالله الكتبي، من الإمارات، مسقط رأسي <b>الذيد</b> في إمارة الشارقة،
+        وأتنقل في يومي بين الشارقة ودبي. خريج <b>هندسة الحاسوب والبرمجة</b>
+        من California State University, Chico.
       </p>
+      <p>
+        هادئ نوعاً ما، مع شوية فكاهة وضحك على نفسي 😄
+        وأكثر شي يسعدني تكوين صداقات صادقة من مختلف أنحاء العالم.
+      </p>
+      <blockquote>🤍 حياة بسيطة ومليئة بالامتنان</blockquote>
     </section>
 
-    <!-- معلومات سريعة -->
+    <!-- أرقام -->
+    <section class="stats">
+      <div class="stat"><b>~70</b><span>🌍 دولة زرتها</span></div>
+      <div class="stat"><b>4K</b><span>🎬 تصوير بالآيفون</span></div>
+      <div class="stat"><b>3</b><span>📱 منصات أنشر فيها</span></div>
+    </section>
+
+    <!-- السفر -->
     <section class="card">
-      <h2>معلومات</h2>
-      <ul class="facts">
-        <li><span>📍 الموقع</span><b>الإمارات</b></li>
-        <li><span>🎯 المجال</span><b>صناعة المحتوى</b></li>
-        <li><span>✉️ للتواصل</span><b><a href="mailto:you@example.com">you@example.com</a></b></li>
+      <h2><span class="ico">✈️</span> السفر</h2>
+      <p>شغفي الأول، وهدفي أزور أكبر عدد ممكن من الدول بحسب الاستطاعة. من الدول اللي زرتها:</p>
+      <div class="flags" id="flags"></div>
+    </section>
+
+    <!-- هواياتي -->
+    <section class="card">
+      <h2><span class="ico">🎯</span> هواياتي ووقت الفراغ</h2>
+      <div class="grid">
+        <div class="tile"><span class="big">🔥</span><h3>الحدادة واللحام</h3><p>دخلتها مؤخراً، وأصنع أفكار ومجسمات جديدة من الحديد.</p></div>
+        <div class="tile"><span class="big">🌱</span><h3>الزراعة والحيوانات</h3><p>أقضي وقتي في المزرعة وأربّي الحيوانات.</p></div>
+        <div class="tile"><span class="big">🚲</span><h3>الدراجات</h3><p>أحب ركوب الدراجات بأنواعها.</p></div>
+        <div class="tile"><span class="big">🛠️</span><h3>الاعتماد على النفس</h3><p>هدفي من الحدادة والزراعة أنجز أعمال البيت البسيطة بنفسي.</p></div>
+      </div>
+    </section>
+
+    <!-- المحتوى -->
+    <section class="card">
+      <h2><span class="ico">🎬</span> المحتوى</h2>
+      <p>
+        أصنع محتوى ليومياتي والأعمال اللي أسويها، ومحتوى السفر،
+        وأنشره في إنستقرام وسناب وتيك توك.
+      </p>
+      <ul class="tags">
+        <li>🎈 عفوي</li>
+        <li>🧩 بسيط</li>
+        <li>🤝 صادق</li>
+        <li>⚡ سهل التنفيذ</li>
+      </ul>
+      <p class="muted">مو مصقول زيادة، ولا يشبه الإعلانات.</p>
+    </section>
+
+    <!-- التعلم والأدوات -->
+    <section class="card">
+      <h2><span class="ico">💻</span> أتعلم وأستخدم</h2>
+      <p>أحب أتعلم الأنظمة والأدوات الجديدة، ومنها:</p>
+      <ul class="tags">
+        <li>📊 Excel</li>
+        <li>🎨 Photoshop</li>
+        <li>✏️ برامج التصميم</li>
+        <li>🤖 الذكاء الاصطناعي</li>
       </ul>
     </section>
 
     <!-- الصور -->
     <section class="card">
-      <h2>صور</h2>
+      <h2><span class="ico">📷</span> صور</h2>
       <div class="gallery">
         <img src="images/photo1.JPG" alt="صورة 1" loading="lazy">
         <img src="images/photo2.JPG" alt="صورة 2" loading="lazy">
         <img src="images/photo3.JPG" alt="صورة 3" loading="lazy">
         <img src="images/photo4.JPG" alt="صورة 4" loading="lazy">
       </div>
+      <p class="muted hint">اضغط على الصورة لتكبيرها</p>
     </section>
 
-    <!-- التواصل الاجتماعي -->
+    <!-- التواصل -->
     <section class="card">
-      <h2>تابعني</h2>
+      <h2><span class="ico">💬</span> تابعني وتواصل معي</h2>
       <div class="links">
-        <a href="https://instagram.com/USERNAME" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://tiktok.com/@USERNAME" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://youtube.com/@USERNAME" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://x.com/USERNAME" target="_blank" rel="noopener">X (Twitter)</a>
-        <a href="https://snapchat.com/add/USERNAME" target="_blank" rel="noopener">Snapchat</a>
-        <a href="https://wa.me/971500000000" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="soc insta" href="https://instagram.com/USERNAME" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg)"></i>Instagram</a>
+        <a class="soc snap" href="https://snapchat.com/add/USERNAME" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/snapchat.svg)"></i>Snapchat</a>
+        <a class="soc tiktok" href="https://tiktok.com/@USERNAME" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/tiktok.svg)"></i>TikTok</a>
+        <a class="soc wa" href="https://wa.me/971500000000" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/whatsapp.svg)"></i>WhatsApp</a>
       </div>
+      <p class="muted mail">✉️ <a href="mailto:you@example.com">you@example.com</a></p>
     </section>
   </main>
 
-  <footer>© <span id="y"></span> محمد الكتبي</footer>
+  <footer>صُنع بحب 🤍 © <span id="y"></span> محمد الكتبي</footer>
+
   <div class="lightbox" id="lightbox" hidden>
     <button class="close" aria-label="إغلاق">&times;</button>
     <img id="lightbox-img" alt="">
@@ -71,6 +134,22 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    // الدول: [الاسم، رمز الدولة]
+    const countries = [
+      ['المغرب','ma'],['السعودية','sa'],['البحرين','bh'],['عُمان','om'],['الكويت','kw'],
+      ['الأردن','jo'],['اليمن','ye'],['مصر','eg'],['تونس','tn'],['أمريكا','us'],
+      ['البرازيل','br'],['الأرجنتين','ar'],['الهند','in'],['ماليزيا','my'],['الصين','cn'],
+      ['هونغ كونغ','hk'],['الفلبين','ph'],['تايلند','th'],['بريطانيا','gb'],['هولندا','nl'],
+      ['فرنسا','fr'],['بلجيكا','be'],['ألمانيا','de'],['النمسا','at'],['التشيك','cz'],
+      ['اليونان','gr'],['إيطاليا','it'],['البوسنة','ba'],['صربيا','rs'],['أرمينيا','am'],
+      ['رومانيا','ro'],['تركيا','tr'],['أذربيجان','az'],['جورجيا','ge'],['المجر','hu'],
+      ['سلوفاكيا','sk'],['الدنمارك','dk'],['السويد','se'],['إسبانيا','es']
+    ];
+    document.getElementById('flags').innerHTML = countries.map(([n, c]) =>
+      `<span class="flag"><img src="https://flagcdn.com/w40/${c}.png" alt="" loading="lazy" width="20" height="15">${n}</span>`
+    ).join('');
+
+    // تكبير الصور
     const box = document.getElementById('lightbox');
     const big = document.getElementById('lightbox-img');
     document.querySelectorAll('.gallery img').forEach(img => {
