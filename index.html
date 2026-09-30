@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>محمد الكتبي</title>
+  <meta name="description" content="نبذة عن محمد الكتبي وروابط حساباته">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <img class="avatar" src="images/profile.svg" alt="صورة محمد الكتبي">
+    <h1>محمد الكتبي</h1>
+    <p class="tagline">صانع محتوى · الإمارات 🇦🇪</p>
+  </header>
+
+  <main>
+    <!-- نبذة -->
+    <section class="card">
+      <h2>نبذة عني</h2>
+      <p>
+        اكتب هنا نبذة قصيرة عنك: من أنت، وش تسوي، وايش يميز محتواك.
+        مثال: أزور الأماكن الجديدة في الإمارات وأعرّفكم عليها بأسلوب بسيط وصادق.
+      </p>
+    </section>
+
+    <!-- معلومات سريعة -->
+    <section class="card">
+      <h2>معلومات</h2>
+      <ul class="facts">
+        <li><span>📍 الموقع</span><b>الإمارات</b></li>
+        <li><span>🎯 المجال</span><b>صناعة المحتوى</b></li>
+        <li><span>✉️ للتواصل</span><b><a href="mailto:you@example.com">you@example.com</a></b></li>
+      </ul>
+    </section>
+
+    <!-- الصور -->
+    <section class="card">
+      <h2>صور</h2>
+      <div class="gallery">
+        <img src="images/photo1.JPG" alt="صورة 1" loading="lazy">
+        <img src="images/photo2.JPG" alt="صورة 2" loading="lazy">
+        <img src="images/photo3.JPG" alt="صورة 3" loading="lazy">
+        <img src="images/photo4.JPG" alt="صورة 4" loading="lazy">
+      </div>
+    </section>
+
+    <!-- التواصل الاجتماعي -->
+    <section class="card">
+      <h2>تابعني</h2>
+      <div class="links">
+        <a href="https://instagram.com/USERNAME" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@USERNAME" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://youtube.com/@USERNAME" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://x.com/USERNAME" target="_blank" rel="noopener">X (Twitter)</a>
+        <a href="https://snapchat.com/add/USERNAME" target="_blank" rel="noopener">Snapchat</a>
+        <a href="https://wa.me/971500000000" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="y"></span> محمد الكتبي</footer>
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="close" aria-label="إغلاق">&times;</button>
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const box = document.getElementById('lightbox');
+    const big = document.getElementById('lightbox-img');
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        big.src = img.src;
+        big.alt = img.alt;
+        box.hidden = false;
+      });
+    });
+    box.addEventListener('click', () => { box.hidden = true; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') box.hidden = true; });
+  </script>
+</body>
+</html>
