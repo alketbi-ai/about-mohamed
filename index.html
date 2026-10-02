@@ -7,25 +7,48 @@
   <meta name="description" content="محمد عبدالله الكتبي — مهندس حاسوب من الإمارات، مسافر وصانع محتوى، زرت قرابة 70 دولة.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="hero">
-    <span class="sticker s1">✈️</span>
-    <span class="sticker s2">🌍</span>
-    <span class="sticker s3">📸</span>
-    <span class="sticker s4">🔥</span>
-    <span class="sticker s5">🚲</span>
-    <span class="sticker s6">🌱</span>
+    <!-- مسار الرحلة والطائرة -->
+    <svg class="route" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path id="flight" d="M -20 230 Q 400 -80 820 200" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+      <circle cx="40" cy="214" r="5" fill="#fff"/>
+      <circle cx="760" cy="188" r="5" fill="#fff"/>
+      <g fill="#fff">
+        <path d="M 16 0 L -12 -10 L -7 0 L -12 10 Z">
+          <animateMotion dur="14s" repeatCount="indefinite" rotate="auto"><mpath href="#flight"/></animateMotion>
+        </path>
+      </g>
+    </svg>
+
+    <span class="cloud c1">☁️</span>
+    <span class="cloud c2">☁️</span>
+    <span class="cloud c3">☁️</span>
+    <span class="sun"></span>
+
+    <div class="stamp" aria-hidden="true">
+      <span>UAE · الإمارات</span>
+      <b>~70</b>
+      <span>دولة · COUNTRIES</span>
+    </div>
 
     <img class="avatar" src="images/profile.jpg" alt="صورة محمد الكتبي">
     <h1>محمد الكتبي</h1>
     <p class="en">Mohamed Alketbi</p>
     <p class="tagline">مهندس حاسوب · مسافر · صانع محتوى</p>
+
+    <div class="ticket" aria-label="تذكرة سفر">
+      <div class="leg"><small>FROM · من</small><b>الذيد</b><em>DHAID</em></div>
+      <div class="mid">✈️</div>
+      <div class="leg"><small>TO · إلى</small><b>العالم</b><em>THE WORLD</em></div>
+    </div>
     <div class="chips">
-      <span class="chip">🇦🇪 الذيد، الشارقة</span>
-      <span class="chip">🌍 ~70 دولة</span>
+      <span class="chip">🇦🇪 الشارقة · دبي</span>
+      <span class="chip">🧳 مسافر</span>
       <span class="chip">🎓 Chico State</span>
     </div>
   </header>
@@ -57,6 +80,8 @@
     <section class="card">
       <h2><span class="ico">✈️</span> السفر</h2>
       <p>شغفي الأول، وهدفي أزور أكبر عدد ممكن من الدول بحسب الاستطاعة. من الدول اللي زرتها:</p>
+      <div id="map" aria-label="خريطة الدول اللي زرتها"></div>
+      <p class="muted hint">الدول المظلّلة على الخريطة من اللي زرتها، والقائمة تحتها كاملة.</p>
       <div class="flags" id="flags"></div>
     </section>
 
@@ -103,10 +128,12 @@
     <section class="card">
       <h2><span class="ico">📷</span> صور</h2>
       <div class="gallery">
-        <img src="images/photo1.JPG" alt="صورة 1" loading="lazy">
-        <img src="images/photo2.JPG" alt="صورة 2" loading="lazy">
-        <img src="images/photo3.JPG" alt="صورة 3" loading="lazy">
-        <img src="images/photo4.JPG" alt="صورة 4" loading="lazy">
+        <figure><img src="images/morocco-market.jpg" alt="ساحة جامع الفنا، مراكش" loading="lazy"><figcaption>🇲🇦 ساحة جامع الفنا · مراكش</figcaption></figure>
+        <figure><img src="images/morocco-waterfall.jpg" alt="شلالات أوزود، المغرب" loading="lazy"><figcaption>🇲🇦 شلالات أوزود</figcaption></figure>
+        <figure><img src="images/photo3.jpg" alt="محمد الكتبي" loading="lazy"></figure>
+        <figure><img src="images/photo1.jpg" alt="محمد الكتبي" loading="lazy"></figure>
+        <figure><img src="images/photo4.jpg" alt="محمد الكتبي" loading="lazy"></figure>
+        <figure><img src="images/photo2.jpg" alt="محمد الكتبي" loading="lazy"></figure>
       </div>
       <p class="muted hint">اضغط على الصورة لتكبيرها</p>
     </section>
@@ -130,6 +157,8 @@
     <img id="lightbox-img" alt="">
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -147,6 +176,26 @@
     document.getElementById('flags').innerHTML = countries.map(([n, c]) =>
       `<span class="flag"><img src="https://flagcdn.com/w40/${c}.png" alt="" loading="lazy" width="20" height="15">${n}</span>`
     ).join('');
+
+    // خريطة الدول (البحرين وهونغ كونغ صغيرة ولا تظهر في الخريطة، لكنها في القائمة)
+    if (window.jsVectorMap) {
+      const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+      new jsVectorMap({
+        selector: '#map',
+        map: 'world',
+        backgroundColor: 'transparent',
+        zoomButtons: false,
+        zoomOnScroll: false,
+        showTooltip: true,
+        regionsSelectable: false,
+        selectedRegions: countries.map(c => c[1].toUpperCase()).concat('AE'),
+        regionStyle: {
+          initial: { fill: dark ? '#2a3142' : '#dfe4ee', stroke: 'none' },
+          selected: { fill: dark ? '#5b9dff' : '#1f6feb' },
+          hover: { fill: '#f4a45c', cursor: 'default' }
+        }
+      });
+    }
 
     // تكبير الصور
     const box = document.getElementById('lightbox');

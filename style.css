@@ -32,59 +32,95 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero (سفر وترحال) ---------- */
 .hero {
   position: relative;
   overflow: hidden;
   text-align: center;
-  padding: 64px 16px 44px;
-  background: linear-gradient(160deg, var(--accent), var(--accent2));
+  padding: 72px 16px 48px;
   color: #fff;
-  border-radius: 0 0 36px 36px;
+  background:
+    radial-gradient(circle at 80% 85%, rgba(255, 190, 90, .55), transparent 45%),
+    linear-gradient(180deg, #1c4e9e 0%, #3d7fd6 45%, #f4a45c 100%);
+  border-radius: 0 0 40px 40px;
 }
+.hero > * { position: relative; z-index: 1; }
+.route { position: absolute !important; inset: 0; width: 100%; height: 100%; z-index: 0 !important; }
+
+.cloud { position: absolute !important; opacity: .85; user-select: none; animation: drift 18s linear infinite; z-index: 0 !important; }
+.c1 { top: 10%; right: -10%; font-size: 3rem; }
+.c2 { top: 42%; right: -10%; font-size: 2rem; animation-duration: 26s; animation-delay: -9s; }
+.c3 { top: 24%; right: -10%; font-size: 2.4rem; animation-duration: 22s; animation-delay: -15s; opacity: .6; }
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-130vw); } }
+
+.sun {
+  position: absolute !important;
+  bottom: -60px; left: 12%;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff3c4, #ffc861 60%, transparent 72%);
+  opacity: .8;
+  z-index: 0 !important;
+}
+
+.stamp {
+  position: absolute !important;
+  top: 20px; left: 14px;
+  width: 104px; height: 104px;
+  border: 3px double rgba(255, 255, 255, .85);
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transform: rotate(-14deg);
+  color: rgba(255, 255, 255, .92);
+  font-size: .5rem; line-height: 1.3; letter-spacing: 0;
+  z-index: 1;
+}
+.stamp b { font-size: 1.6rem; line-height: 1.1; }
+
 .avatar {
-  width: 148px;
-  height: 148px;
+  width: 148px; height: 148px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 15%;
   border: 5px solid #fff;
   background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
-  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
 }
-.hero h1 { font-size: 2.2rem; font-weight: 800; margin-top: 14px; line-height: 1.3; position: relative; }
-.hero .en { opacity: .85; letter-spacing: .5px; position: relative; }
-.tagline { font-weight: 500; margin-top: 4px; position: relative; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; position: relative; }
+.hero h1 { font-size: 2.2rem; font-weight: 800; margin-top: 14px; line-height: 1.3; text-shadow: 0 2px 12px rgba(0,0,0,.25); }
+.hero .en { opacity: .9; letter-spacing: 1px; }
+.tagline { font-weight: 500; margin-top: 4px; }
+
+/* تذكرة السفر */
+.ticket {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  max-width: 340px; margin: 20px auto 0;
+  background: #fff; color: #1b1f2a;
+  border-radius: 16px; padding: 10px 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  position: relative;
+  -webkit-mask: radial-gradient(circle 9px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat,
+                radial-gradient(circle 9px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat;
+          mask: radial-gradient(circle 9px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat,
+                radial-gradient(circle 9px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat;
+}
+.ticket .leg { display: flex; flex-direction: column; line-height: 1.3; }
+.ticket small { font-size: .62rem; color: #667085; letter-spacing: .5px; }
+.ticket b { font-size: 1.15rem; }
+.ticket em { font-size: .7rem; font-style: normal; color: #667085; letter-spacing: 2px; }
+.ticket .mid { flex: 1; text-align: center; font-size: 1.3rem; background: linear-gradient(90deg, #c7cedb 50%, transparent 0) center / 10px 2px repeat-x; }
+.ticket .mid { padding: 0 4px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
 .chip {
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .22);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, .35);
+  border: 1px solid rgba(255, 255, 255, .4);
   padding: 2px 14px;
   border-radius: 999px;
   font-size: .92rem;
 }
-
-.sticker {
-  position: absolute;
-  font-size: 2rem;
-  opacity: .9;
-  animation: float 5s ease-in-out infinite;
-  user-select: none;
-}
-.s1 { top: 14%; right: 8%; }
-.s2 { top: 55%; right: 4%; animation-delay: -1s; font-size: 2.4rem; }
-.s3 { top: 12%; left: 8%; animation-delay: -2s; }
-.s4 { top: 58%; left: 5%; animation-delay: -3s; }
-.s5 { bottom: 6%; left: 22%; animation-delay: -1.5s; }
-.s6 { bottom: 6%; right: 22%; animation-delay: -2.5s; }
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(-6deg); }
-  50% { transform: translateY(-12px) rotate(6deg); }
-}
-@media (prefers-reduced-motion: reduce) { .sticker { animation: none; } }
-@media (max-width: 520px) { .sticker { font-size: 1.5rem; } .s5, .s6 { display: none; } }
+@media (prefers-reduced-motion: reduce) { .cloud { animation: none; right: 8%; } .route animateMotion { display: none; } }
+@media (max-width: 420px) { .stamp { width: 84px; height: 84px; top: 12px; left: 8px; } .stamp b { font-size: 1.2rem; } }
 
 /* ---------- Layout ---------- */
 main {
@@ -251,3 +287,19 @@ footer { text-align: center; color: var(--muted); padding: 8px 16px 40px; font-s
   .links { grid-template-columns: repeat(4, 1fr); }
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ---------- Map ---------- */
+#map { width: 100%; height: 240px; margin-top: 8px; border-radius: 14px; background: var(--soft); overflow: hidden; }
+@media (min-width: 600px) { #map { height: 340px; } }
+
+/* ---------- Gallery captions ---------- */
+.gallery figure { position: relative; margin: 0; overflow: hidden; border-radius: 14px; }
+.gallery figure img { display: block; }
+.gallery figcaption {
+  position: absolute; inset: auto 0 0 0;
+  padding: 18px 10px 8px;
+  font-size: .8rem; color: #fff; text-align: center; line-height: 1.4;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .65));
+  pointer-events: none;
+}
+@media (min-width: 600px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
