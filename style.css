@@ -303,3 +303,7 @@ footer { text-align: center; color: var(--muted); padding: 8px 16px 40px; font-s
   pointer-events: none;
 }
 @media (min-width: 600px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Instagram feed ---------- */
+.insta-feed { min-height: 120px; margin-top: 8px; border-radius: 14px; overflow: hidden; }
+.soc.follow { margin-top: 14px; }
