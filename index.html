@@ -20,7 +20,6 @@
   <meta name="twitter:image" content="https://alketbi-ai.github.io/about-mohamed/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -93,8 +92,6 @@
     <section class="card">
       <h2><span class="ico">✈️</span> السفر</h2>
       <p>شغفي الأول، وهدفي أزور أكبر عدد ممكن من الدول بحسب الاستطاعة. من الدول اللي زرتها:</p>
-      <div id="map" aria-label="خريطة الدول اللي زرتها"></div>
-      <p class="muted hint">الدول المظلّلة على الخريطة من اللي زرتها، والقائمة تحتها كاملة.</p>
       <div class="flags" id="flags"></div>
     </section>
 
@@ -189,9 +186,6 @@
     <button class="close" aria-label="إغلاق">&times;</button>
     <img id="lightbox-img" alt="">
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -209,26 +203,6 @@
     document.getElementById('flags').innerHTML = countries.map(([n, c]) =>
       `<span class="flag"><img src="https://flagcdn.com/w40/${c}.png" alt="" loading="lazy" width="20" height="15">${n}</span>`
     ).join('');
-
-    // خريطة الدول (البحرين وهونغ كونغ صغيرة ولا تظهر في الخريطة، لكنها في القائمة)
-    if (window.jsVectorMap) {
-      const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-      new jsVectorMap({
-        selector: '#map',
-        map: 'world',
-        backgroundColor: 'transparent',
-        zoomButtons: false,
-        zoomOnScroll: false,
-        showTooltip: true,
-        regionsSelectable: false,
-        selectedRegions: countries.map(c => c[1].toUpperCase()).concat('AE'),
-        regionStyle: {
-          initial: { fill: dark ? '#2a3142' : '#dfe4ee', stroke: 'none' },
-          selected: { fill: dark ? '#5b9dff' : '#1f6feb' },
-          hover: { fill: '#f4a45c', cursor: 'default' }
-        }
-      });
-    }
 
     // تكبير الصور
     const box = document.getElementById('lightbox');
