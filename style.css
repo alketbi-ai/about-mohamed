@@ -37,7 +37,7 @@ a:hover { text-decoration: underline; }
   position: relative;
   overflow: hidden;
   text-align: center;
-  padding: 36px 16px 26px;
+  padding: 28px 16px 20px;
   color: #fff;
   background:
     radial-gradient(circle at 80% 85%, rgba(255, 190, 90, .55), transparent 45%),
@@ -47,38 +47,11 @@ a:hover { text-decoration: underline; }
 .hero > * { position: relative; z-index: 1; }
 .route { position: absolute !important; inset: 0; width: 100%; height: 100%; z-index: 0 !important; }
 
-.cloud { position: absolute !important; opacity: .85; user-select: none; animation: drift 18s linear infinite; z-index: 0 !important; }
-.c1 { top: 10%; right: -10%; font-size: 3rem; }
-.c2 { top: 42%; right: -10%; font-size: 2rem; animation-duration: 26s; animation-delay: -9s; }
-.c3 { top: 24%; right: -10%; font-size: 2.4rem; animation-duration: 22s; animation-delay: -15s; opacity: .6; }
-@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-130vw); } }
 
-.sun {
-  position: absolute !important;
-  bottom: -60px; left: 12%;
-  width: 150px; height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fff3c4, #ffc861 60%, transparent 72%);
-  opacity: .8;
-  z-index: 0 !important;
-}
 
-.stamp {
-  position: absolute !important;
-  top: 12px; left: 10px;
-  width: 76px; height: 76px;
-  border: 3px double rgba(255, 255, 255, .85);
-  border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  transform: rotate(-14deg);
-  color: rgba(255, 255, 255, .92);
-  font-size: .4rem; line-height: 1.3; letter-spacing: 0;
-  z-index: 1;
-}
-.stamp b { font-size: 1.15rem; line-height: 1.1; }
 
 .avatar {
-  width: 104px; height: 104px;
+  width: 92px; height: 92px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 15%;
@@ -90,26 +63,6 @@ a:hover { text-decoration: underline; }
 .hero .en { display: none; opacity: .9; letter-spacing: 1px; }
 .tagline { font-weight: 500; margin-top: 4px; }
 
-/* تذكرة السفر */
-.ticket {
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  max-width: 300px; margin: 12px auto 0;
-  background: #fff; color: #1b1f2a;
-  border-radius: 14px; padding: 6px 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-  position: relative;
-  -webkit-mask: radial-gradient(circle 9px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat,
-                radial-gradient(circle 9px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat;
-          mask: radial-gradient(circle 9px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat,
-                radial-gradient(circle 9px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat;
-}
-.ticket .leg { display: flex; flex-direction: column; line-height: 1.3; }
-.ticket small { font-size: .62rem; color: #667085; letter-spacing: .5px; }
-.ticket b { font-size: 1rem; }
-.ticket em { font-size: .7rem; font-style: normal; color: #667085; letter-spacing: 2px; }
-.ticket .mid { flex: 1; text-align: center; font-size: 1.3rem; background: linear-gradient(90deg, #c7cedb 50%, transparent 0) center / 10px 2px repeat-x; }
-.ticket .mid { padding: 0 4px; }
-
 .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
 .chip {
   background: rgba(255, 255, 255, .22);
@@ -119,8 +72,7 @@ a:hover { text-decoration: underline; }
   border-radius: 999px;
   font-size: .92rem;
 }
-@media (prefers-reduced-motion: reduce) { .cloud { animation: none; right: 8%; } .route animateMotion { display: none; } }
-@media (max-width: 420px) { .stamp { width: 84px; height: 84px; top: 12px; left: 8px; } .stamp b { font-size: 1.2rem; } }
+@media (prefers-reduced-motion: reduce) { .route animateMotion { display: none; } }
 
 /* ---------- Layout ---------- */
 main {
