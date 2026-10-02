@@ -224,6 +224,21 @@
       `<span class="flag"><img src="https://flagcdn.com/w40/${c}.png" alt="" loading="lazy" width="20" height="15">${n}</span>`
     ).join('');
 
+    // ظهور الأقسام بالتمرير
+    const items = document.querySelectorAll('main .card, main .stat');
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+      items.forEach((el, i) => {
+        el.classList.add('reveal');
+        if (el.classList.contains('stat')) el.style.transitionDelay = (i % 3) * 90 + 'ms';
+        io.observe(el);
+      });
+    }
+
     // تكبير الصور
     const box = document.getElementById('lightbox');
     const big = document.getElementById('lightbox-img');
