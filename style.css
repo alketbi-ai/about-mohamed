@@ -297,3 +297,11 @@ footer { text-align: center; color: var(--muted); padding: 8px 16px 40px; font-s
 }
 .rules .e { font-size: 1.25rem; }
 @media (min-width: 600px) { .rules { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---------- Visitor counter ---------- */
+.visitors {
+  display: inline-block; margin-bottom: 10px;
+  background: var(--soft); border: 1px solid var(--border);
+  border-radius: 999px; padding: 2px 16px; font-size: .9rem;
+}
+.visitors b { color: var(--accent); }

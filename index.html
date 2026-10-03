@@ -204,7 +204,9 @@
     </section>
   </main>
 
-  <footer>صُنع بحب 🤍 © <span id="y"></span> محمد الكتبي</footer>
+  <footer>
+    <p class="visitors" id="visitors" hidden>👀 عدد الزوار: <b id="vcount"></b></p>
+    صُنع بحب 🤍 © <span id="y"></span> محمد الكتبي</footer>
 
   <script>
     (() => {
@@ -238,6 +240,25 @@
     document.getElementById('flags').innerHTML = countries.map(([n, c]) =>
       `<span class="flag"><img src="https://flagcdn.com/w40/${c}.png" alt="" loading="lazy" width="20" height="15">${n}</span>`
     ).join('');
+
+    // عداد الزوار (يُحسب مرة واحدة لكل متصفح، ولا يُحسب إلا على الدومين الحقيقي)
+    (async () => {
+      const base = 'https://abacus.jasoncameron.dev';
+      const path = '/aldhaid-ae/visits';
+      let counted = false;
+      try { counted = localStorage.getItem('visited') === '1'; } catch (e) {}
+      const live = location.hostname === 'aldhaid.ae' || location.hostname === 'www.aldhaid.ae';
+      const action = (live && !counted) ? 'hit' : 'get';
+      try {
+        const r = await fetch(base + '/' + action + path);
+        if (!r.ok) return;
+        const { value } = await r.json();
+        if (typeof value !== 'number') return;
+        if (action === 'hit') { try { localStorage.setItem('visited', '1'); } catch (e) {} }
+        document.getElementById('vcount').textContent = value.toLocaleString('ar-AE');
+        document.getElementById('visitors').hidden = false;
+      } catch (e) { /* العداد اختياري: لو تعطل يبقى مخفياً */ }
+    })();
 
     // ظهور الأقسام بالتمرير
     const items = document.querySelectorAll('main .card, main .stat');
