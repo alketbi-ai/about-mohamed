@@ -87,3 +87,37 @@ footer.founder small{opacity:.75}
 .tile.join:hover .go{color:var(--palm)}
 @keyframes pulse{50%{box-shadow:0 0 0 14px rgba(200,135,46,.08)}}
 @media(prefers-reduced-motion:reduce){.tile.join .icon{animation:none}}
+
+.construction{background:#fff3cd;color:#6b4a00;text-align:center;font-size:.92rem;font-weight:700;padding:6px 14px;border-bottom:1px solid #f0d98a}
+
+/* البحث */
+.search{max-width:520px;margin:0 auto 22px}
+.search input{width:100%;font:inherit;font-size:1rem;padding:12px 20px;border-radius:30px;border:2px solid var(--line);background:var(--card);box-shadow:0 8px 22px rgba(92,58,20,.12);outline:none}
+.search input:focus{border-color:var(--gold)}
+.noresult{text-align:center;color:var(--muted)}
+[hidden]{display:none!important}
+
+/* المعالم */
+.tile.static:hover{transform:none;box-shadow:0 10px 26px rgba(92,58,20,.14)}
+.tile .go.muted{color:var(--muted);font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chips button{font:inherit;border:1px solid var(--line);background:var(--sand);color:var(--palm);border-radius:20px;padding:2px 16px;cursor:pointer}
+.chips button.on{background:var(--palm);color:#fff;border-color:var(--palm)}
+.soon{color:var(--muted)}
+
+/* الأرشيف */
+.empty{text-align:center;padding:20px 0}
+.empty .big{font-size:3.5rem}
+.gallery{columns:3 200px;column-gap:14px}
+.gallery figure{margin:0 0 14px;break-inside:avoid;cursor:zoom-in;background:var(--sand);border-radius:12px;overflow:hidden}
+.gallery img{width:100%;display:block}
+.gallery figcaption{padding:6px 12px;font-size:.85rem;color:var(--muted)}
+.lightbox{position:fixed;inset:0;background:rgba(20,12,6,.9);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:10px}
+.lightbox p{color:#fff;margin:12px 0 0}
+
+/* التنقل على الجوال + العدّاد */
+nav{display:flex;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+@media(max-width:700px){header.site .wrap{gap:10px}.logo{font-size:1.15rem}}
+footer.founder .visits{margin-top:8px;font-size:.88rem;opacity:.85}

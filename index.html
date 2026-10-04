@@ -11,13 +11,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="construction">🚧 الموقع تحت الإنشاء والتجديد، وسيتم إضافة المزيد قريباً</div>
 <header class="site"><div class="wrap"><a class="logo" href="index.html">ال<span>ذيد</span></a><nav id="nav"></nav></div></header>
 
 <section class="hero">
   <div class="text">
     <span class="badge">🇦🇪 الشارقة · الإمارات العربية المتحدة</span>
-    <h1>أهلاً بكم في <em>الذيد</em></h1>
-    <p>معلومات عن مدينة الذيد، وسِيَر الشخصيات المعروفة فيها وتاريخهم.</p>
+    <h1>أهلاً بكم في <em>المنطقة الوسطى</em></h1>
+    <p>مدن المنطقة ومعالمها وأرشيفها المصوّر، وسِيَر الشخصيات المعروفة فيها.</p>
   </div>
   <svg class="scene" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
   <circle cx="900" cy="130" r="70" fill="#ffe7b0" opacity=".9"/>
@@ -42,7 +43,10 @@
 </section>
 
 <main class="wrap sections">
+  <div class="search"><input id="q" type="search" placeholder="🔍 ابحث عن مدينة أو معلم أو شخصية..." autocomplete="off"></div>
   <div class="grid" id="tiles"></div>
+  <div class="grid" id="results" hidden></div>
+  <p class="noresult" id="noresult" hidden>لا توجد نتائج مطابقة.</p>
 
   <section class="about">
     <h2>ذاكرة الذيد</h2>
