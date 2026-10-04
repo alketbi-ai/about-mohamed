@@ -67,3 +67,23 @@ footer.founder small{opacity:.75}
 @media(max-width:560px){nav a{margin-inline-start:12px;font-size:.88rem}.hero{padding-top:48px;min-height:500px}}
 
 @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.tile .cover{height:100px}}
+
+.checklist{padding-inline-start:20px}
+.checklist li{margin-bottom:6px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0 6px}
+.contact .c{display:block;text-align:center;background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:12px;font-weight:700;color:var(--palm);transition:.2s}
+.contact .c:hover{background:var(--palm);color:#fff}
+.contact .c.wa{background:#25a244;color:#fff;border-color:#25a244}
+.contact .c.wa:hover{background:#1c7d34}
+.cta{display:inline-block;margin-top:16px;background:var(--palm);color:#fff;border-radius:30px;padding:8px 26px;font-weight:700;border-bottom:3px solid var(--gold)}
+.cta:hover{background:var(--palm2)}
+
+/* بطاقة المشاركة المميزة */
+.tile.join{background:linear-gradient(160deg,#fff7e3,#f6dfaa);border:2px dashed var(--gold);box-shadow:0 10px 26px rgba(200,135,46,.28);position:relative}
+.tile.join .cover{background:none}
+.tile.join .icon{width:64px;height:64px;border-radius:50%;background:var(--gold);color:#fff;font-size:1.8rem;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(200,135,46,.2);animation:pulse 2.4s infinite}
+.tile.join .tag{background:var(--gold);color:#fff}
+.tile.join .go{color:var(--gold)}
+.tile.join:hover .go{color:var(--palm)}
+@keyframes pulse{50%{box-shadow:0 0 0 14px rgba(200,135,46,.08)}}
+@media(prefers-reduced-motion:reduce){.tile.join .icon{animation:none}}
