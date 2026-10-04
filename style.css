@@ -121,3 +121,8 @@ nav{display:flex;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
 @media(max-width:700px){header.site .wrap{gap:10px}.logo{font-size:1.15rem}}
 footer.founder .visits{margin-top:8px;font-size:.88rem;opacity:.85}
+
+.tile .cover.person{background-position:center}
+.tile .cover.person[style*="thumbs"]::after{background:linear-gradient(to top,rgba(43,26,16,.25),transparent 50%)}
+
+.tile.join .cover[style]{background-size:cover;background-position:center}
