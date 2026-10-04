@@ -1,292 +1,37 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>محمد الكتبي</title>
-  <meta name="description" content="محمد عبدالله الكتبي — مهندس حاسوب من الإمارات، مسافر وصانع محتوى، زرت قرابة 70 دولة.">
-  <meta name="theme-color" content="#1c4e9e">
-  <link rel="icon" href="images/profile.jpg">
-  <link rel="canonical" href="https://aldhaid.ae/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ar_AE">
-  <meta property="og:title" content="محمد الكتبي">
-  <meta property="og:description" content="مهندس حاسوب من الإمارات، مسافر وصانع محتوى. زرت قرابة 70 دولة.">
-  <meta property="og:url" content="https://aldhaid.ae/">
-  <meta property="og:image" content="https://aldhaid.ae/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://aldhaid.ae/og-image.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الذيد | aldhaid.ae</title>
+<meta name="description" content="موقع الذيد: مدينة الذيد وأهلها في مكان واحد">
+<meta name="theme-color" content="#0f2c5c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="site"><div class="wrap"><a class="logo" href="index.html">ال<span>ذيد</span></a><nav id="nav"></nav></div></header>
 
-  <header class="hero">
-    <!-- مسار الرحلة والطائرة -->
-    <svg class="route" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <path id="flight" d="M -20 230 Q 400 -80 820 200" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="2.5" stroke-dasharray="3 9" stroke-linecap="round"/>
-      <circle cx="40" cy="214" r="5" fill="#fff"/>
-      <circle cx="760" cy="188" r="5" fill="#fff"/>
-      <g fill="#fff">
-        <path d="M 16 0 L -12 -10 L -7 0 L -12 10 Z">
-          <animateMotion dur="14s" repeatCount="indefinite" rotate="auto"><mpath href="#flight"/></animateMotion>
-        </path>
-      </g>
-    </svg>
+<section class="hero">
+  <div class="dots"></div>
+  <span class="badge">🇦🇪 الشارقة · الإمارات العربية المتحدة</span>
+  <h1>أهلاً بكم في <em>الذيد</em></h1>
+  <p>معلومات عن مدينة الذيد، وسِيَر الشخصيات المعروفة فيها وتاريخهم.</p>
+</section>
 
-    <img class="avatar" src="images/profile.jpg" alt="صورة محمد الكتبي">
-    <h1>محمد الكتبي</h1>
-    <p class="en">Mohamed Alketbi</p>
-    <p class="tagline">مهندس حاسوب · مسافر · صانع محتوى</p>
-    <div class="chips">
-      <span class="chip">🇦🇪 الشارقة · دبي</span>
-      <span class="chip">🧳 مسافر</span>
-      <span class="chip">🎓 Chico State</span>
-    </div>
-  </header>
+<main class="wrap sections">
+  <div class="grid" id="places"></div>
+  <h2 class="section" id="people-title">شخصيات من الذيد</h2>
+  <div class="grid" id="people"></div>
 
-  <main>
-    <!-- من أنا -->
-    <section class="card">
-      <h2><span class="ico">👋</span> من أنا</h2>
-      <p>
-        محمد عبدالله الكتبي، من الإمارات، مسقط رأسي <b>الذيد</b> في إمارة الشارقة،
-        وأتنقل في يومي بين الشارقة ودبي. خريج <b>هندسة الحاسوب والبرمجة</b>
-        من California State University, Chico.
-      </p>
-      <p>
-        هادئ نوعاً ما، مع شوية فكاهة وضحك على نفسي 😄
-        وأكثر شي يسعدني تكوين صداقات صادقة من مختلف أنحاء العالم.
-      </p>
-      <blockquote>🤍 حياة بسيطة ومليئة بالامتنان</blockquote>
-    </section>
+  <section class="about">
+    <h2>ذاكرة الذيد</h2>
+    <p>نوثّق هنا نبذة عن الشخصيات المعروفة في مدينة الذيد وتاريخها، ليبقى أثرها للأجيال القادمة.</p>
+  </section>
+</main>
 
-    <!-- قصتي -->
-    <section class="card">
-      <h2><span class="ico">🧭</span> قصتي</h2>
-      <ol class="timeline">
-        <li>
-          <span class="dot">🏡</span>
-          <h3>البداية في الذيد</h3>
-          <p>مسقط رأسي في إمارة الشارقة، ومنها بدأت حياة بسيطة ومليئة بالامتنان.</p>
-        </li>
-        <li>
-          <span class="dot">🎓</span>
-          <h3>هندسة الحاسوب</h3>
-          <p>درست هندسة الحاسوب والبرمجة في California State University, Chico، وتخرجت منها.</p>
-        </li>
-        <li>
-          <span class="dot">✈️</span>
-          <h3>الشغف بالسفر</h3>
-          <p>صار السفر شغفي الأول، وزرت قرابة 70 دولة، وكوّنت صداقات من مختلف أنحاء العالم.</p>
-        </li>
-        <li>
-          <span class="dot">🎬</span>
-          <h3>صناعة المحتوى</h3>
-          <p>بدأت أوثّق يومياتي وسفري بأسلوب عفوي وصادق، وأنشرها في إنستقرام وسناب وتيك توك.</p>
-        </li>
-        <li>
-          <span class="dot">🔥</span>
-          <h3>الحدادة والمزرعة</h3>
-          <p>دخلت عالم الحدادة واللحام والزراعة وتربية الحيوانات، عشان أعتمد على نفسي في أعمال البيت.</p>
-        </li>
-        <li>
-          <span class="dot">🌍</span>
-          <h3>والرحلة مستمرة</h3>
-          <p>أتعلم أدوات جديدة، وأزور دولاً جديدة، وأكمل الطريق بامتنان.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- أرقام -->
-    <section class="stats">
-      <div class="stat"><b>~70</b><span>🌍 دولة زرتها</span></div>
-      <div class="stat"><b>4K</b><span>🎬 تصوير بالآيفون</span></div>
-      <div class="stat"><b>3</b><span>📱 منصات أنشر فيها</span></div>
-    </section>
-
-    <!-- السفر -->
-    <section class="card">
-      <h2><span class="ico">✈️</span> السفر</h2>
-      <p>شغفي الأول، وهدفي أزور أكبر عدد ممكن من الدول بحسب الاستطاعة. من الدول اللي زرتها:</p>
-      <div class="flags" id="flags"></div>
-    </section>
-
-    <!-- قواعد السفر -->
-    <section class="card">
-      <h2><span class="ico">📜</span> قواعد محمد في السفر</h2>
-      <ol class="rules">
-        <li><span class="n">1</span><span class="e">🤍</span>أبدأ بالامتنان</li>
-        <li><span class="n">2</span><span class="e">🤝</span>أكوّن صداقات صادقة</li>
-        <li><span class="n">3</span><span class="e">🎈</span>العفوية أحسن من الترتيب</li>
-        <li><span class="n">4</span><span class="e">🔊</span>أسمع صوت المكان</li>
-        <li><span class="n">5</span><span class="e">🚶</span>أمشي وأشوف بعيوني</li>
-        <li><span class="n">6</span><span class="e">🌅</span>ما أفوّت الوقت الذهبي</li>
-        <li><span class="n">7</span><span class="e">📸</span>أوثّق بدون ما تفوتني اللحظة</li>
-        <li><span class="n">8</span><span class="e">🧳</span>أبسّط ولا أعقّد</li>
-      </ol>
-    </section>
-
-    <!-- هواياتي -->
-    <section class="card">
-      <h2><span class="ico">🎯</span> هواياتي ووقت الفراغ</h2>
-      <div class="grid">
-        <div class="tile"><span class="big">🔥</span><h3>الحدادة واللحام</h3><p>دخلتها مؤخراً، وأصنع أفكار ومجسمات جديدة من الحديد.</p></div>
-        <div class="tile"><span class="big">🌱</span><h3>الزراعة والحيوانات</h3><p>أقضي وقتي في المزرعة وأربّي الحيوانات.</p></div>
-        <div class="tile"><span class="big">🚲</span><h3>الدراجات</h3><p>أحب ركوب الدراجات بأنواعها.</p></div>
-        <div class="tile"><span class="big">🛠️</span><h3>الاعتماد على النفس</h3><p>هدفي من الحدادة والزراعة أنجز أعمال البيت البسيطة بنفسي.</p></div>
-      </div>
-    </section>
-
-    <!-- المحتوى -->
-    <section class="card">
-      <h2><span class="ico">🎬</span> المحتوى</h2>
-      <p>
-        أصنع محتوى ليومياتي والأعمال اللي أسويها، ومحتوى السفر،
-        وأنشره في إنستقرام وسناب وتيك توك.
-      </p>
-      <ul class="tags">
-        <li>🎈 عفوي</li>
-        <li>🧩 بسيط</li>
-        <li>🤝 صادق</li>
-        <li>⚡ سهل التنفيذ</li>
-      </ul>
-      <p class="muted">مو مصقول زيادة، ولا يشبه الإعلانات.</p>
-    </section>
-
-    <!-- التعلم والأدوات -->
-    <section class="card">
-      <h2><span class="ico">💻</span> أتعلم وأستخدم</h2>
-      <p>أحب أتعلم الأنظمة والأدوات الجديدة، ومنها:</p>
-      <ul class="tags">
-        <li>📊 Excel</li>
-        <li>🎨 Photoshop</li>
-        <li>✏️ برامج التصميم</li>
-        <li>🤖 الذكاء الاصطناعي</li>
-      </ul>
-    </section>
-
-    <!-- الصور -->
-    <section class="card">
-      <h2><span class="ico">📷</span> صور</h2>
-      <div class="gallery">
-        <figure><img src="images/morocco-market.jpg" alt="ساحة جامع الفنا، مراكش" loading="lazy"><figcaption>🇲🇦 ساحة جامع الفنا · مراكش</figcaption></figure>
-        <figure><img src="images/morocco-waterfall.jpg" alt="شلالات أوزود، المغرب" loading="lazy"><figcaption>🇲🇦 شلالات أوزود</figcaption></figure>
-        <figure><img src="images/photo3.jpg" alt="محمد الكتبي" loading="lazy"></figure>
-        <figure><img src="images/photo1.jpg" alt="محمد الكتبي" loading="lazy"></figure>
-        <figure><img src="images/photo4.jpg" alt="محمد الكتبي" loading="lazy"></figure>
-        <figure><img src="images/photo2.jpg" alt="محمد الكتبي" loading="lazy"></figure>
-      </div>
-      <p class="muted hint">اضغط على الصورة لتكبيرها</p>
-    </section>
-
-    <!-- إنستقرام -->
-    <section class="card">
-      <h2><span class="ico">📸</span> من إنستقرام</h2>
-      <div class="insta-feed">
-        <behold-widget feed-id="JTGPiDyUB6IaNqz0ckpw"></behold-widget>
-      </div>
-      <a class="soc insta follow" href="https://instagram.com/NCC" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg)"></i>تابعني على إنستقرام</a>
-    </section>
-
-    <!-- التواصل -->
-    <section class="card">
-      <h2><span class="ico">💬</span> تابعني وتواصل معي</h2>
-      <div class="links">
-        <a class="soc insta" href="https://instagram.com/NCC" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/instagram.svg)"></i>Instagram</a>
-        <a class="soc snap" href="https://snapchat.com/add/dxb.6" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/snapchat.svg)"></i>Snapchat</a>
-        <a class="soc tiktok" href="https://tiktok.com/@alketbi.travel" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/tiktok.svg)"></i>TikTok</a>
-        <a class="soc wa" href="https://wa.me/971556080700" target="_blank" rel="noopener"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons/icons/whatsapp.svg)"></i>WhatsApp</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p class="visitors" id="visitors" hidden>👀 عدد الزوار: <b id="vcount"></b></p>
-    صُنع بحب 🤍 © <span id="y"></span> محمد الكتبي</footer>
-
-  <script>
-    (() => {
-      if (window.__bhldScript) return;
-      window.__bhldScript = true;
-      const d = document, s = d.createElement("script");
-      s.type = "module";
-      s.src = "https://w.behold.so/widget.js";
-      setTimeout(() => { d.head.append(s); }, 0);
-    })();
-  </script>
-
-  <div class="lightbox" id="lightbox" hidden>
-    <button class="close" aria-label="إغلاق">&times;</button>
-    <img id="lightbox-img" alt="">
-  </div>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // الدول: [الاسم، رمز الدولة]
-    const countries = [
-      ['المغرب','ma'],['السعودية','sa'],['البحرين','bh'],['عُمان','om'],['الكويت','kw'],
-      ['الأردن','jo'],['اليمن','ye'],['مصر','eg'],['تونس','tn'],['أمريكا','us'],
-      ['البرازيل','br'],['الأرجنتين','ar'],['الهند','in'],['ماليزيا','my'],['الصين','cn'],
-      ['هونغ كونغ','hk'],['الفلبين','ph'],['تايلند','th'],['بريطانيا','gb'],['هولندا','nl'],
-      ['فرنسا','fr'],['بلجيكا','be'],['ألمانيا','de'],['النمسا','at'],['التشيك','cz'],
-      ['اليونان','gr'],['إيطاليا','it'],['البوسنة','ba'],['صربيا','rs'],['أرمينيا','am'],
-      ['رومانيا','ro'],['تركيا','tr'],['أذربيجان','az'],['جورجيا','ge'],['المجر','hu'],
-      ['سلوفاكيا','sk'],['الدنمارك','dk'],['السويد','se'],['إسبانيا','es']
-    ];
-    document.getElementById('flags').innerHTML = countries.map(([n, c]) =>
-      `<span class="flag"><img src="https://flagcdn.com/w40/${c}.png" alt="" loading="lazy" width="20" height="15">${n}</span>`
-    ).join('');
-
-    // عداد الزوار (يُحسب مرة واحدة لكل متصفح، ولا يُحسب إلا على الدومين الحقيقي)
-    (async () => {
-      const base = 'https://abacus.jasoncameron.dev';
-      const path = '/aldhaid-ae/visits';
-      let counted = false;
-      try { counted = localStorage.getItem('visited') === '1'; } catch (e) {}
-      const live = location.hostname === 'aldhaid.ae' || location.hostname === 'www.aldhaid.ae';
-      const action = (live && !counted) ? 'hit' : 'get';
-      try {
-        const r = await fetch(base + '/' + action + path);
-        if (!r.ok) return;
-        const { value } = await r.json();
-        if (typeof value !== 'number') return;
-        if (action === 'hit') { try { localStorage.setItem('visited', '1'); } catch (e) {} }
-        document.getElementById('vcount').textContent = value.toLocaleString('ar-AE');
-        document.getElementById('visitors').hidden = false;
-      } catch (e) { /* العداد اختياري: لو تعطل يبقى مخفياً */ }
-    })();
-
-    // ظهور الأقسام بالتمرير
-    const items = document.querySelectorAll('main .card, main .stat');
-    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-      items.forEach((el, i) => {
-        el.classList.add('reveal');
-        if (el.classList.contains('stat')) el.style.transitionDelay = (i % 3) * 90 + 'ms';
-        io.observe(el);
-      });
-    }
-
-    // تكبير الصور
-    const box = document.getElementById('lightbox');
-    const big = document.getElementById('lightbox-img');
-    document.querySelectorAll('.gallery img').forEach(img => {
-      img.addEventListener('click', () => {
-        big.src = img.src;
-        big.alt = img.alt;
-        box.hidden = false;
-      });
-    });
-    box.addEventListener('click', () => { box.hidden = true; });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') box.hidden = true; });
-  </script>
+<footer>© aldhaid.ae</footer>
+<script src="site.js"></script>
 </body>
 </html>
