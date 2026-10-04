@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>الذيد | aldhaid.ae</title>
 <meta name="description" content="موقع الذيد: مدينة الذيد وأهلها في مكان واحد">
-<meta name="theme-color" content="#0f2c5c">
+<meta name="theme-color" content="#1f4d3a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -14,16 +14,35 @@
 <header class="site"><div class="wrap"><a class="logo" href="index.html">ال<span>ذيد</span></a><nav id="nav"></nav></div></header>
 
 <section class="hero">
-  <div class="dots"></div>
-  <span class="badge">🇦🇪 الشارقة · الإمارات العربية المتحدة</span>
-  <h1>أهلاً بكم في <em>الذيد</em></h1>
-  <p>معلومات عن مدينة الذيد، وسِيَر الشخصيات المعروفة فيها وتاريخهم.</p>
+  <div class="text">
+    <span class="badge">🇦🇪 الشارقة · الإمارات العربية المتحدة</span>
+    <h1>أهلاً بكم في <em>الذيد</em></h1>
+    <p>معلومات عن مدينة الذيد، وسِيَر الشخصيات المعروفة فيها وتاريخهم.</p>
+  </div>
+  <svg class="scene" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <circle cx="900" cy="130" r="70" fill="#ffe7b0" opacity=".9"/>
+  <circle cx="900" cy="130" r="110" fill="#ffe7b0" opacity=".2"/>
+  <path d="M0 250 Q250 170 520 240 T1200 210 V400 H0Z" fill="#e3a352"/>
+  <g fill="#8c4a26">
+    <rect x="470" y="205" width="170" height="60"/>
+    <rect x="455" y="170" width="38" height="95"/><rect x="617" y="170" width="38" height="95"/>
+    <path d="M455 170h6v-8h8v8h8v-8h8v8h8v-8h3v8z"/><path d="M617 170h6v-8h8v8h8v-8h8v8h8v-8h3v8z"/>
+    <path d="M470 205h8v-8h10v8h10v-8h10v8h10v-8h10v8h10v-8h10v8h10v-8h10v8h10v-8h10v8h8v8H470z"/>
+    <path d="M530 265v-34a25 25 0 0 1 50 0v34z" fill="#4a2410"/>
+  </g>
+  <path d="M0 300 Q300 240 600 295 T1200 270 V400 H0Z" fill="#d08f42"/>
+  <g fill="#1f4d3a" stroke="#1f4d3a" stroke-linecap="round">
+    <g transform="translate(150 215)"><path d="M0 120 Q4 60 0 0" stroke-width="7" fill="none"/><path d="M0 0 Q-45 -18 -80 12M0 0 Q-30 -40 -62 -30M0 0 Q0 -50 -4 -62M0 0 Q30 -40 62 -30M0 0 Q45 -18 80 12" stroke-width="5" fill="none"/></g>
+    <g transform="translate(235 250) scale(.8)"><path d="M0 120 Q-4 60 0 0" stroke-width="7" fill="none"/><path d="M0 0 Q-45 -18 -80 12M0 0 Q-30 -40 -62 -30M0 0 Q0 -50 -4 -62M0 0 Q30 -40 62 -30M0 0 Q45 -18 80 12" stroke-width="5" fill="none"/></g>
+    <g transform="translate(1010 205)"><path d="M0 130 Q6 60 0 0" stroke-width="7" fill="none"/><path d="M0 0 Q-45 -18 -80 12M0 0 Q-30 -40 -62 -30M0 0 Q0 -50 -4 -62M0 0 Q30 -40 62 -30M0 0 Q45 -18 80 12" stroke-width="5" fill="none"/></g>
+    <g transform="translate(1100 240) scale(.85)"><path d="M0 120 Q-5 60 0 0" stroke-width="7" fill="none"/><path d="M0 0 Q-45 -18 -80 12M0 0 Q-30 -40 -62 -30M0 0 Q0 -50 -4 -62M0 0 Q30 -40 62 -30M0 0 Q45 -18 80 12" stroke-width="5" fill="none"/></g>
+  </g>
+  <path d="M0 345 Q350 300 700 340 T1200 325 V400 H0Z" fill="#fbf5ea"/>
+</svg>
 </section>
 
 <main class="wrap sections">
-  <div class="grid" id="places"></div>
-  <h2 class="section" id="people-title">شخصيات من الذيد</h2>
-  <div class="grid" id="people"></div>
+  <div class="grid" id="tiles"></div>
 
   <section class="about">
     <h2>ذاكرة الذيد</h2>
@@ -31,7 +50,11 @@
   </section>
 </main>
 
-<footer>© aldhaid.ae</footer>
+<footer class="founder">
+  <div class="label">مؤسس الموقع</div>
+  <div class="name">محمد بن هويدن الكتبي</div>
+  <small>© aldhaid.ae</small>
+</footer>
 <script src="site.js"></script>
 </body>
 </html>

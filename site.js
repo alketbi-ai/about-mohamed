@@ -15,12 +15,10 @@ function tileHTML(item, kind) {
   const cover = item.image
     ? `<div class="cover person" style="background-image:url('${item.image}')"><span class="tag">${item.tag || ""}</span></div>`
     : `<div class="cover place"><span class="tag">${item.tag || ""}</span><span class="icon">${item.icon || "📍"}</span></div>`;
-  return `<a class="tile" href="${item.url}">${cover}<div class="body"><h3>${item.name}</h3><p>${item.desc || ""}</p><span class="go">زيارة الصفحة ←</span></div></a>`;
+  return `<a class="tile" href="${item.url}">${cover}<div class="body"><h3>${item.name}</h3><p>${item.desc || ""}</p><span class="go">زيارة ←</span></div></a>`;
 }
-const placesEl = document.getElementById("places");
-if (placesEl) placesEl.innerHTML = PLACES.map(tileHTML).join("");
-const peopleEl = document.getElementById("people");
-if (peopleEl) peopleEl.innerHTML = PEOPLE.map(tileHTML).join("");
+const tilesEl = document.getElementById("tiles");
+if (tilesEl) tilesEl.innerHTML = [...PLACES, ...PEOPLE].map(tileHTML).join("");
 
 const navEl = document.getElementById("nav");
 if (navEl) {
